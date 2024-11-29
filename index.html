@@ -3,40 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #0078d4;
-            color: white;
-            padding: 1rem 0;
-        }
-        main {
-            padding: 2rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>Social Media Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Web App</h1>
+        <h1>Social Media Tracker</h1>
     </header>
     <main>
-        <p>This is a simple web app created and deployed using GitHub Pages!</p>
+        <section id="artist-form">
+            <h2>Submit an Artist</h2>
+            <form id="submit-artist">
+                <label>
+                    Artist Name:
+                    <input type="text" id="artist-name" required>
+                </label>
+                <label>
+                    TikTok URL:
+                    <input type="url" id="tiktok-url">
+                </label>
+                <label>
+                    Instagram URL:
+                    <input type="url" id="instagram-url">
+                </label>
+                <label>
+                    Facebook URL:
+                    <input type="url" id="facebook-url">
+                </label>
+                <label>
+                    Twitter URL:
+                    <input type="url" id="twitter-url">
+                </label>
+                <button type="submit">Submit Artist</button>
+            </form>
+        </section>
+
+        <section id="search-artist">
+            <h2>Search for an Artist</h2>
+            <form id="search-form">
+                <label>
+                    Artist Name:
+                    <input type="text" id="search-name" required>
+                </label>
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 My Web App</p>
+        <p>&copy; 2024 Social Media Tracker</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
